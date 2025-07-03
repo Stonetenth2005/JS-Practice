@@ -41,3 +41,27 @@ let myObj = {
 const myFunction = function(){  // datatype of function returns Object, more specifically object function
     console.log("Hello world");
 }
+
+// ****************************** Stack & Heap ******************************
+
+// all primitive types use stack memory (it gives a copy of declared variable)
+
+// all non-primitive types use heap memory (it gives a referance of the declared variable, not the copy)
+
+let name = "Tushar"
+let newName = name;
+
+newName = "Srivastava" // it doesnt change the value of name, since its a copy of the original variable, not the original one
+console.log(name);
+console.log(newName);
+
+let obj1 = {
+    email: "1@gmail.com",
+    name: "Tushar"
+}
+
+let obj2 = obj1;
+obj2.email = "2@gmail.com";
+
+console.log(obj2.email) // 2@gmail.com
+console.log(obj1.email) // also changes this email, since its the original address
